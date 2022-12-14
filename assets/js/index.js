@@ -75,6 +75,7 @@ const init = () => {
 
 // Function call to initialize app
 init();
+
 // promptUser();
 const licenseBadge = (license) => {
     if (license === "MIT") {
@@ -82,9 +83,6 @@ const licenseBadge = (license) => {
     }
     else if (license === "Apache 2.0") {
         return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
-    }
-    else if (license === "GPL 3.0") {
-        return ``
     }
     else if (license === "BSD 3") {
         return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`
