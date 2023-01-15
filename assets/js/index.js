@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+
 const { fstat } = require('fs');
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
 
-// TODO: Create an array of questions for user input
+
 const promptUser = () => {
     return inquirer
         .prompt([
@@ -56,14 +56,14 @@ const promptUser = () => {
         ])
 };
 
-// TODO: Create a function to write README file
+
 function writeToFile(data) {
     fstat.writeFile(`./dist${data.filename}.md`, generateREADME(data), (err) =>
         err ? console.error(err) : console.log("ReadMe has been created")
     );
 }
 
-// TODO: Create a function to initialize app
+
 const init = () => {
     promptUser()
         .then((data) => {
@@ -73,10 +73,10 @@ const init = () => {
         .then(() => console.log('Successfully wrote to README.md'))
 };
 
-// Function call to initialize app
+
 init();
 
-// promptUser();
+
 const licenseBadge = (license) => {
     if (license === "MIT") {
         return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
